@@ -1,137 +1,136 @@
-﻿book_id,title,author,edition,pub_year,,
-1,Software Engineering - A Practitioners Approach,Roger S. Pressman,7,,,
-2,Software Project Management,"Bob Hughes, Mike Cotterell, Rajib Mall",6,2018,,
-3,An Integrated Approach to Software Engineering,Pankaj Jalote,,,,
-4,Software Engineering: Principles and Practice,Hans van Vliet,3,2010,,
-5,Data Communications and Networking,Behrouz A. Forouzan,5,2013,,
-6,Computer Networks – A Systems Approach,"Larry L. Peterson, Bruce S. Davie",4,2019,,
-7,Computer and Communication Networks,Nader F. Mir,2,2015,,
-8,Data and Computer Communication,William Stallings,10,2014,,
-9,"Introduction to Automata Theory,
-Languages and Computation","John E Hopcroft, Rajeev Motwani, Jeffrey D. Ullman",2,,,
-10,"Automata, Computability and Complexity",Elain Rich,1,2018,,
-11,Theory of Computer Science,"K.L.P Mishra, N Chandrashekaran",3,2012,,
-12,An introduction to Formal Languages and Automata,Peter Linz,3,1998,,
-13,Introduction to the Theory of Computation,Michael Sipser,3,2013,,
-14,Introduction to Languages and The Theory of Computation,John C Martin,3,2013,,
-15,Computer Vision: Algorithms and Applications ,Richard Szeliski,2,2022,,
-16,Digital Image Processing,"Rafael C G., Woods R E., Eddins S L",4,2019,,
-17,Computer Vision: A Modern Approach,"David Forsyth, Jean Ponce",2,2015,,
-18,Concise Computer Vision - An Introduction into Theory and Algorithms,Reinhard Klette,,2014,,
-19,Data Warehousing Fundamentals for IT Professionals,Paulraj Ponniah,2,2010,,
-20,Distributed and Cloud Computing,"Kai Hwang, Geoffrey C Fox, Jack J Dongarra",,2012,,
-21,Cloud Computing Theory and Practice,Dan C. Marinescu,2,2018,,
-22,Mastering Cloud Computing ,"Rajkumar Buyya, Christian Vecchiola, Thamrai Selvi",1,2017,,
-23,Cloud Computing: A Practical Approach,"Toby Velte, Anthony Velte",,2017,,
-24,Cloud Application Architectures: Building Applications and Infrastructure in the Cloud,George Reese,1,2009,,
-25,Cloud Computing Explained: Implementation Handbook for Enterprises,John Rhoton,2,2009,,
+﻿book_id,title,author,edition,pub_year
+1,Software Engineering - A Practitioners Approach,Roger S. Pressman,7,
+2,Software Project Management,"Bob Hughes, Mike Cotterell, Rajib Mall",6,2018
+3,An Integrated Approach to Software Engineering,Pankaj Jalote,,
+4,Software Engineering: Principles and Practice,Hans van Vliet,3,2010
+5,Data Communications and Networking,Behrouz A. Forouzan,5,2013
+6,Computer Networks – A Systems Approach,"Larry L. Peterson, Bruce S. Davie",4,2019
+7,Computer and Communication Networks,Nader F. Mir,2,2015
+8,Data and Computer Communication,William Stallings,10,2014
+9,"Introduction to Automata Theory, Languages and Computation","John E Hopcroft, Rajeev Motwani, Jeffrey D. Ullman",2,
+10,"Automata, Computability and Complexity",Elain Rich,1,2018
+11,Theory of Computer Science,"K.L.P Mishra, N Chandrashekaran",3,2012
+12,An introduction to Formal Languages and Automata,Peter Linz,3,1998
+13,Introduction to the Theory of Computation,Michael Sipser,3,2013
+14,Introduction to Languages and The Theory of Computation,John C Martin,3,2013
+15,Computer Vision: Algorithms and Applications ,Richard Szeliski,2,2022
+16,Digital Image Processing,"Rafael C G., Woods R E., Eddins S L",4,2019
+17,Computer Vision: A Modern Approach,"David Forsyth, Jean Ponce",2,2015
+18,Concise Computer Vision - An Introduction into Theory and Algorithms,Reinhard Klette,,2014
+19,Data Warehousing Fundamentals for IT Professionals,Paulraj Ponniah,2,2010
+20,Distributed and Cloud Computing,"Kai Hwang, Geoffrey C Fox, Jack J Dongarra",,2012
+21,Cloud Computing Theory and Practice,Dan C. Marinescu,2,2018
+22,Mastering Cloud Computing ,"Rajkumar Buyya, Christian Vecchiola, Thamrai Selvi",1,2017
+23,Cloud Computing: A Practical Approach,"Toby Velte, Anthony Velte",,2017
+24,Cloud Application Architectures: Building Applications and Infrastructure in the Cloud,George Reese,1,2009
+25,Cloud Computing Explained: Implementation Handbook for Enterprises,John Rhoton,2,2009
 26,"Distributed Systems Concepts
-and Design","George Coulouris,  Jean Dollimore, Tim Kindberg",5,2012,,
-27,Distributed Systems Concepts and Design,"George Coulouris, Jean Dollimore, Tim Kindberg",5,2017,,
-28,Python Data Science Handbook: Essential Tools for Working with Data,Jake VanderPlas,2,2022,,
-29,Environmental Studies,S M Prakash,3,2018,,
-30, Electronic Waste Management Science,"Hester R.E., Harrison R.M",,2009,,
-31,Environmental Studies for UG students,Earch Barucha,,2004,,
-32,Environmental Studies,Benny Joseph,,2005,,
-33,Environmental Studies - From Crisis to Cure,R. Rajagopalan,2,2013,,
-34," E-waste: implications, regulations, and management in India and current global best practices",Johri R.,,,,
-35,Principles of Environmental Science and Engineering,Raman Sivakumar,2,2005,,
-36,Environmental Science – working with the Earth,G. Tyler Miller Jr,11,2006,,
-37,Text Book of Environmental and Ecology,"Dr. Pratiba Singh, Dr.Anoop Singh, Dr. Piyush Malaviya",,,,
-38,Elements of Environmental Science and Engineering,P. Meenakshi,,2006,,
-39,Introduction to the Design and Analysis of Algorithms,Anany Levitin,3,2017,,
-40,Computer Algorithms/C++,"Ellis Horowitz, SatrajSahni, Rajasekaran",2,2014,,
-41,Introduction to Algorithms,"Thomas H. Cormen, Charles E. Leiserson, Ronal L. Rivest, Clifford Stein",3,,,
-42,Design and Analysis of Algorithms,S. Sridhar,,,,
-43,Artificial Intelligence,Stuart J. Russell and Peter Norvig,3,2015,,
-44,Artificial Intelligence,"Elaine Rich, Kevin Knight,",3,2013,,
-45,Artificial Intelligence Structure and strategies for complex,George F Lugar,5,2011,,
-46,Principles of Artificial Intelligence,Nils J. Nilsson,,1980,,
-47,Artificial Intelligence,Saroj Kaushik,,2014,,
-48,Fundamentals of Database Systems,"Ramez Elmasri, Shamkant B. Navathe",7,2017,,
-49,Database management systems," Ramakrishnan, Gehrke",3,2014,,
-50,Discrete Mathematical Structures an Applied Introduction,"Ralph P. Grimaldi, B V Ramana",5,2004,,
-51,Discrete and Combinatorial Mathematics,Ralph P. Grimaldi,5,2004,,
-52,Discrete Mathematics – A Concept-based approach,"Basavaraj S Anami, Venakanna S Madalli",,2016,,
-53,Discrete Mathematics and its Applications,Kenneth H. Rosen,6,2007,,
-54,A Treatise on Discrete Mathematical Structures,Jayant Ganguly,,2010,,
-55,Discrete Mathematical Structures Theory and Applications,D.S. Malik M.K. Sen,,2004,,
-56,Discrete Mathematics with Applications,Thomas Koshy,,2005,,
-57,Metric Spaces,"P.K. Jain, Khalil Ahamad",,2019,,
-58,Metric Spaces,Micheal O' Searcoid,,2009,,
-59,Metric Spaces,"Satish Shirali, Harikishan L. Vasudeva",,2006,,
-60,Metric Spaces,E. T. Copson,,1988,,
-61,Naïve Set Theory,P. R. Halmos,,1974,,
-62,Topology of Metric Spaces,S. Kumaresan,2,2011,,
-63,Introduction to Topology and Modern Analysis,G.F. Simmons,,2004,,
-64,Mathematics for Machine learning,"Marc Peter Deisennroth, A. Aldo Faisal, Cheng Soon Ong",,2020,,
-65,"Convex Optimization: Algorithms and Complexity, Foundations and Trends in Optimization",S. Bubeck,,2015,,
-66,Distributed optimization and statistical learning via the alternating direction method of multipliers,"S. Boyd, N. Parikh, E. Chu",,,,
-67,Linear Algebra and Optimization for Machine Learning,Charu C. Aggarwal,,2020,,
-68,First-Order Methods in Optimization,A. Beck,,2017,,
-69,Learning with Submodular Functions: A Convex Optimization Perspective,F. Bach,,,,
-70,An Introduction to Game Theory,Martin  Osborne,1,2009,,
-71,Analysis of Conflict Game Theory,Roger B. Myerson,,2008,,
-72,"Introduction to Operations Research, Concepts and Cases","Frederick S. Hillier, Gerald J. Lieberman",9,2010,,
-73,Frederick S. Hillier and Gerald J. Lieberman,Joel Watson,2,2007,,
-74,Programming Scala,O'Reilly Media,3,,,
-75,Functional Programming in Scala,"Paul Chiusano, Rúnar Bjarnason",1,,,
-76,MongoDB: The Definitive Guide,Kristina Chodorow,2,2013,,
-77,MongoDB in Action,Kyle Banker,2,2016,,
-78,MongoDB Complete Guide,Manu Sharma,1,2023,,
-79,"Pro MERN Stack: Full Stack Web App Development with Mongo, Express, React, and Node, Apress",Vasan Subramanian,1,2017,,
-80,MERN Quick Start Guide,Eddy Wilson Iriarte Koroliova,,2018,,
-81,Julia – Bit by Bit (Programming for Beginners),Noel Kalicharan,,2021,,
-82,Beginning Julia Programming (For Engineers and Scientists),Sandeep Nagar,,2017,,
-83,ARM system developers guide,"Andrew N Sloss, Dominic Symes, Chris Wright",,2008,,
-84,Microcontroller (ARM) and Embedded System,Raghunandan.G.H,,2019,,
-85,Insider’s Guide to the ARM7 based microcontrollers,Hitex Ltd.,1,2005,,
-86,Graph theory with the applications to engineering & Computer Science,Narsingh Deo,,2016,,
-87,Graph theory with Applications,"J.A. Bondy, U.S.R. Murty",1,2008,,
-88, Introduction to Graph Theory,"Garry Chartand, Ping Zhang",,2006,,
-89,Graph Theory,Frank Harary,,,,
-90,Graph Theory,R. Diestel,,2016,,
-91,Introduction to Graph Theory,Douglas B. West,,2001,,
-92,Introduction to Graph Theory,Robin J. Wilson,,2010,,
-93,Linear Algebra and its applications,"David C. Lay, Steven R. Lay, Judi J Mc. Donald",6,2021,,
-94,Linear Algebra and its applications,Gilbert Strang,4,2005,,
-95,Linear Algebra: An Introduction,"Richard Bronson, Gabriel B. Costa",2,2014,,
-96,Theory and problems of linear algebra,"Seymour Lipschutz, Marc Lipso",6,2017,,
-97,Green Information Technology – A Sustainable Approach,"Mohammad Dastbaz Colin Pattinson, Babak Akhgar",,2015,,
-98,Harnessing Green IT:  Principles  and Practices,"San Murugesan, G. R. Gangadharan",,,,
-99,The Art of Capacity Planning,John Allspaw,,2008,,
-100, The UX Book-Process and Guidelines for Ensuring a Quality User Experience,"Rex Hartson, Pardha S. Pyla",,2012,,
-101,A Short Introduction to LaTeX,Firuza Karmali,,2019,,
-102,Formatting Information: A Beginner's Introduction to Typesetting with LaTeX,Peter Flynn,,2005,,
-103,Business Communication,"Vikram Bisen, Priya",,2009,,
-104,Essentials of Business Communication (11 E),"Mary Ellen Guffey, Dana Loewy",,2019,,
-105,Business Communication Today,"Courtland L. Bovée, John V. Thill",14,2018,,
-106,Basic Financial Management,"Khan M Y., Jain P K.",3,2012,,
-107,Financial Management—Theory and Practice,Chandra P.,10,2019,,
-108,Taxmann's Fundamentals of Financial Management-With Excel Applications,Rustagi R P.,15,2020,,
-109,Principles and Practice of Management,Prasad L.M.,10,2020,,
-110,Organizational Behaviour,"Stephen P. Robbins, Timothy A. Judge, Neharika Vohra",18,2018,,
-111,Essentials of Management,"Harold Koontz, Heinz Weihrich",11,2021,,
-112,Principles and Practices of Management and Organisational Behaviour,"Chandrani Singh, Aditi Khatri",,2016,,
-113,Principles of Management,Ramesh B. Rudani,2,2019,,
-114,Fundamentals of Management,Stephen P. Robbins,9,2016,,
-115,Management: Principles and Practices,Griffin,,2013,,
-116,The new era of management ,R. L. Daft ,10,2013,,
-117,Organizational Behavior: An Evidence Based Approach,"F. Luthans, B. Luthans, K. Luthans",13,2015,,
-118,Understanding Organizational Behavior,U. Pareek,3,2011,,
-119,The Analysis of Time Series: An Introduction,Chris Chatfield,6,2003,,
-120,Hands-on Programming with R,Garett Grolemund,1,2014,,
-121,Applied Multivariate data analysis,Jobson J Dave,,2012,,
-122,An Introduction to Multivariate Statistical Analysis,Anderson T W,3,2009,,
-123,Programming Python,Mark Lutz,4,2012,,
-124,Principles of Marketing,"P. Kotler, G. Armstrong",16,2016,,
-125,Marketing Research,"D. A. Aaker, R. P. Leon, G. S. Day",11,2013,,
-126,Java: The Complete Reference,"Herbert Schildt, Dr. Danny Coward",13,,,
-127,Java EE 5,"Ivan Bayross, Vaishali Shah, Sharanam Shah, Cynthia Bayross",2,,,
-128,Unix Concepts and Applications,Sumitabha Das,,,,
-129,Advanced Programming in the UNIX Environment,W. Richard Stevens,2,2005,,
-130,Unix System Programming Using C++,Terrence Chan,,1999,,
-131,UNIX & Shell Programming,M.G. Venkatesh Murthy,,,,
-132,Linux Command Line and Shell Scripting Bible,"Richard Blum, Christine Brenham",2,2014,,
-133,Fundamentals of Web Development,"Randy Connolly, Ricardo Hoar",3,2021,,
-134,Programming the World Wide Web,Robert W Sebesta,8,2020,,
+and Design","George Coulouris,  Jean Dollimore, Tim Kindberg",5,2012
+27,Distributed Systems Concepts and Design,"George Coulouris, Jean Dollimore, Tim Kindberg",5,2017
+28,Python Data Science Handbook: Essential Tools for Working with Data,Jake VanderPlas,2,2022
+29,Environmental Studies,S M Prakash,3,2018
+30, Electronic Waste Management Science,"Hester R.E., Harrison R.M",,2009
+31,Environmental Studies for UG students,Earch Barucha,,2004
+32,Environmental Studies,Benny Joseph,,2005
+33,Environmental Studies - From Crisis to Cure,R. Rajagopalan,2,2013
+34," E-waste: implications, regulations, and management in India and current global best practices",Johri R.,,
+35,Principles of Environmental Science and Engineering,Raman Sivakumar,2,2005
+36,Environmental Science – working with the Earth,G. Tyler Miller Jr,11,2006
+37,Text Book of Environmental and Ecology,"Dr. Pratiba Singh, Dr.Anoop Singh, Dr. Piyush Malaviya",,
+38,Elements of Environmental Science and Engineering,P. Meenakshi,,2006
+39,Introduction to the Design and Analysis of Algorithms,Anany Levitin,3,2017
+40,Computer Algorithms/C++,"Ellis Horowitz, SatrajSahni, Rajasekaran",2,2014
+41,Introduction to Algorithms,"Thomas H. Cormen, Charles E. Leiserson, Ronal L. Rivest, Clifford Stein",3,
+42,Design and Analysis of Algorithms,S. Sridhar,,
+43,Artificial Intelligence,Stuart J. Russell and Peter Norvig,3,2015
+44,Artificial Intelligence,"Elaine Rich, Kevin Knight,",3,2013
+45,Artificial Intelligence Structure and strategies for complex,George F Lugar,5,2011
+46,Principles of Artificial Intelligence,Nils J. Nilsson,,1980
+47,Artificial Intelligence,Saroj Kaushik,,2014
+48,Fundamentals of Database Systems,"Ramez Elmasri, Shamkant B. Navathe",7,2017
+49,Database management systems," Ramakrishnan, Gehrke",3,2014
+50,Discrete Mathematical Structures an Applied Introduction,"Ralph P. Grimaldi, B V Ramana",5,2004
+51,Discrete and Combinatorial Mathematics,Ralph P. Grimaldi,5,2004
+52,Discrete Mathematics – A Concept-based approach,"Basavaraj S Anami, Venakanna S Madalli",,2016
+53,Discrete Mathematics and its Applications,Kenneth H. Rosen,6,2007
+54,A Treatise on Discrete Mathematical Structures,Jayant Ganguly,,2010
+55,Discrete Mathematical Structures Theory and Applications,D.S. Malik M.K. Sen,,2004
+56,Discrete Mathematics with Applications,Thomas Koshy,,2005
+57,Metric Spaces,"P.K. Jain, Khalil Ahamad",,2019
+58,Metric Spaces,Micheal O' Searcoid,,2009
+59,Metric Spaces,"Satish Shirali, Harikishan L. Vasudeva",,2006
+60,Metric Spaces,E. T. Copson,,1988
+61,Naïve Set Theory,P. R. Halmos,,1974
+62,Topology of Metric Spaces,S. Kumaresan,2,2011
+63,Introduction to Topology and Modern Analysis,G.F. Simmons,,2004
+64,Mathematics for Machine learning,"Marc Peter Deisennroth, A. Aldo Faisal, Cheng Soon Ong",,2020
+65,"Convex Optimization: Algorithms and Complexity, Foundations and Trends in Optimization",S. Bubeck,,2015
+66,Distributed optimization and statistical learning via the alternating direction method of multipliers,"S. Boyd, N. Parikh, E. Chu",,
+67,Linear Algebra and Optimization for Machine Learning,Charu C. Aggarwal,,2020
+68,First-Order Methods in Optimization,A. Beck,,2017
+69,Learning with Submodular Functions: A Convex Optimization Perspective,F. Bach,,
+70,An Introduction to Game Theory,Martin  Osborne,1,2009
+71,Analysis of Conflict Game Theory,Roger B. Myerson,,2008
+72,"Introduction to Operations Research, Concepts and Cases","Frederick S. Hillier, Gerald J. Lieberman",9,2010
+73,Frederick S. Hillier and Gerald J. Lieberman,Joel Watson,2,2007
+74,Programming Scala,O'Reilly Media,3,
+75,Functional Programming in Scala,"Paul Chiusano, Rúnar Bjarnason",1,
+76,MongoDB: The Definitive Guide,Kristina Chodorow,2,2013
+77,MongoDB in Action,Kyle Banker,2,2016
+78,MongoDB Complete Guide,Manu Sharma,1,2023
+79,"Pro MERN Stack: Full Stack Web App Development with Mongo, Express, React, and Node, Apress",Vasan Subramanian,1,2017
+80,MERN Quick Start Guide,Eddy Wilson Iriarte Koroliova,,2018
+81,Julia – Bit by Bit (Programming for Beginners),Noel Kalicharan,,2021
+82,Beginning Julia Programming (For Engineers and Scientists),Sandeep Nagar,,2017
+83,ARM system developers guide,"Andrew N Sloss, Dominic Symes, Chris Wright",,2008
+84,Microcontroller (ARM) and Embedded System,Raghunandan.G.H,,2019
+85,Insider’s Guide to the ARM7 based microcontrollers,Hitex Ltd.,1,2005
+86,Graph theory with the applications to engineering & Computer Science,Narsingh Deo,,2016
+87,Graph theory with Applications,"J.A. Bondy, U.S.R. Murty",1,2008
+88, Introduction to Graph Theory,"Garry Chartand, Ping Zhang",,2006
+89,Graph Theory,Frank Harary,,
+90,Graph Theory,R. Diestel,,2016
+91,Introduction to Graph Theory,Douglas B. West,,2001
+92,Introduction to Graph Theory,Robin J. Wilson,,2010
+93,Linear Algebra and its applications,"David C. Lay, Steven R. Lay, Judi J Mc. Donald",6,2021
+94,Linear Algebra and its applications,Gilbert Strang,4,2005
+95,Linear Algebra: An Introduction,"Richard Bronson, Gabriel B. Costa",2,2014
+96,Theory and problems of linear algebra,"Seymour Lipschutz, Marc Lipso",6,2017
+97,Green Information Technology – A Sustainable Approach,"Mohammad Dastbaz Colin Pattinson, Babak Akhgar",,2015
+98,Harnessing Green IT:  Principles  and Practices,"San Murugesan, G. R. Gangadharan",,
+99,The Art of Capacity Planning,John Allspaw,,2008
+100, The UX Book-Process and Guidelines for Ensuring a Quality User Experience,"Rex Hartson, Pardha S. Pyla",,2012
+101,A Short Introduction to LaTeX,Firuza Karmali,,2019
+102,Formatting Information: A Beginner's Introduction to Typesetting with LaTeX,Peter Flynn,,2005
+103,Business Communication,"Vikram Bisen, Priya",,2009
+104,Essentials of Business Communication (11 E),"Mary Ellen Guffey, Dana Loewy",,2019
+105,Business Communication Today,"Courtland L. Bovée, John V. Thill",14,2018
+106,Basic Financial Management,"Khan M Y., Jain P K.",3,2012
+107,Financial Management—Theory and Practice,Chandra P.,10,2019
+108,Taxmann's Fundamentals of Financial Management-With Excel Applications,Rustagi R P.,15,2020
+109,Principles and Practice of Management,Prasad L.M.,10,2020
+110,Organizational Behaviour,"Stephen P. Robbins, Timothy A. Judge, Neharika Vohra",18,2018
+111,Essentials of Management,"Harold Koontz, Heinz Weihrich",11,2021
+112,Principles and Practices of Management and Organisational Behaviour,"Chandrani Singh, Aditi Khatri",,2016
+113,Principles of Management,Ramesh B. Rudani,2,2019
+114,Fundamentals of Management,Stephen P. Robbins,9,2016
+115,Management: Principles and Practices,Griffin,,2013
+116,The new era of management ,R. L. Daft ,10,2013
+117,Organizational Behavior: An Evidence Based Approach,"F. Luthans, B. Luthans, K. Luthans",13,2015
+118,Understanding Organizational Behavior,U. Pareek,3,2011
+119,The Analysis of Time Series: An Introduction,Chris Chatfield,6,2003
+120,Hands-on Programming with R,Garett Grolemund,1,2014
+121,Applied Multivariate data analysis,Jobson J Dave,,2012
+122,An Introduction to Multivariate Statistical Analysis,Anderson T W,3,2009
+123,Programming Python,Mark Lutz,4,2012
+124,Principles of Marketing,"P. Kotler, G. Armstrong",16,2016
+125,Marketing Research,"D. A. Aaker, R. P. Leon, G. S. Day",11,2013
+126,Java: The Complete Reference,"Herbert Schildt, Dr. Danny Coward",13,
+127,Java EE 5,"Ivan Bayross, Vaishali Shah, Sharanam Shah, Cynthia Bayross",2,
+128,Unix Concepts and Applications,Sumitabha Das,,
+129,Advanced Programming in the UNIX Environment,W. Richard Stevens,2,2005
+130,Unix System Programming Using C++,Terrence Chan,,1999
+131,UNIX & Shell Programming,M.G. Venkatesh Murthy,,
+132,Linux Command Line and Shell Scripting Bible,"Richard Blum, Christine Brenham",2,2014
+133,Fundamentals of Web Development,"Randy Connolly, Ricardo Hoar",3,2021
+134,Programming the World Wide Web,Robert W Sebesta,8,2020
