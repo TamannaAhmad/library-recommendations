@@ -1,3 +1,5 @@
+import string
+import pandas as pd
 import nltk
 nltk.download('wordnet')         #WordNet synsets and lemmas
 nltk.download('stopwords')       #stopwords
@@ -7,20 +9,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 from nltk.corpus import wordnet
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
-import string
-import pandas as pd
+from rapidfuzz import process, fuzz
 
-#load data
-books = pd.read_csv('data/books.csv')  #read the books file
-courses = pd.read_csv('data/courses.csv')  #read the courses file
-
-try:
-  books = books.drop(['Unnamed: 5'], axis = 1)
-  books = books.drop(['Unnamed: 6'], axis = 1)
-except:
-  pass
-
-books.head()
+#load datasets
+books = pd.read_csv("data/books.csv")
+branch_course = pd.read_csv("data/branch-course.csv")
+courses_books = pd.read_csv("data/courses-books.csv")
+courses = pd.read_csv("data/courses.csv")
+user_data = pd.read_csv("data/sample user data.csv")
 
 #preprocess and combine features
 def preprocess_text(text):
@@ -31,89 +27,142 @@ def preprocess_text(text):
     text = ' '.join([stemmer.stem(word) for word in text.split() if word not in stop_words])  #stem and remove stopwords
     return text
 
-#function for content-based recommending
-def recommend_books_by_syllabus(course_keywords, books_df, tfidf_matrix):
-    course_vec = tfidf.transform([course_keywords])
-    similarities = cosine_similarity(course_vec, tfidf_matrix).flatten()
-    indices = similarities.argsort()
-    recommended_books = books_df.iloc[indices]
-    return filter_recommendations(recommended_books, course_keywords)
-
-#filter recommendations for accuracy
-def filter_recommendations(recommended_books, course_keywords):
-    return recommended_books[recommended_books['title'].str.contains(course_keywords, case=False)]
-
 books['processed_title'] = books['title'].apply(preprocess_text)
 tfidf = TfidfVectorizer(stop_words='english')
 tfidf_matrix = tfidf.fit_transform(books['processed_title'])
 
-#example
-course_keywords = "java"
-recommended_books = recommend_books_by_syllabus(course_keywords, books, tfidf_matrix)
-recommended_books = recommended_books.drop(['processed_title'], axis = 1)
-print(recommended_books)
+#approximate title matching
 
-books_df = pd.read_csv('data/books.csv')
-users_df = pd.read_csv('data/sample user data.csv')  #sample user data
+def fuzzy_match(book_title, books_df, user_choice, top_n):
+    choices = books_df['title'].tolist()
+    best_match = process.extractOne(book_title, choices, scorer=fuzz.partial_ratio)
+    matched_title = best_match[0]
+    if (user_choice == "title"):
+        return recommend_books_by_title(matched_title, books_df, tfidf_matrix, top_n)
 
-merged_df = users_df.merge(books_df, on='book_id', how='left')
-print(merged_df.head())
+    if best_match and best_match[1] >= 60: #confidence threshold = 60
+        print(f"Matched Title: {best_match[0]} (Confidence: {best_match[1]})")
+        return best_match[0]  # Return the matched title
+    else:
+        print("No matching book title found.")
+        return None
+    
+#function for title-based recommendations
 
-user_book_matrix = users_df.pivot_table(index='user_id', columns='book_id', aggfunc='size', fill_value=0) #1 signifies book borrowed by user; 0 book not borrowed
-print(user_book_matrix.head())
+def recommend_books_by_title(book_title, books_df, tfidf_matrix, top_n=5):
+    query_vec = tfidf.transform([book_title])
+    similarities = cosine_similarity(query_vec, tfidf_matrix).flatten()
+    top_indices = similarities.argsort()[-top_n:][::-1]
+    return books_df.iloc[top_indices][['book_id', 'title', 'author', 'edition', 'pub_year']]
 
-from sklearn.metrics.pairwise import cosine_similarity
+#function for branch & semester based recommendations
 
-#cosine similarity for books
-book_similarity = cosine_similarity(user_book_matrix.T)
-book_similarity_df = pd.DataFrame(book_similarity, index=user_book_matrix.columns, columns=user_book_matrix.columns)
+#function for branch & semester based recommendations
 
-print(book_similarity_df.head())
+def recommend_books_by_branch_semester(branch, semester, branch_course_df, courses_books_df, books_df):
+    relevant_courses = branch_course_df[
+        (branch_course_df['branch'] == branch) & 
+        (branch_course_df['semester'] == semester)
+    ]['course_code']
 
-import numpy as np
+    relevant_books = courses_books_df[
+        courses_books_df['course_code'].isin(relevant_courses)
+    ]['book_id']
 
-def hybrid_recommend_books(book_title, books_df, tfidf_matrix, tfidf, book_similarity_df, top_n = 5, threshold = 0.2):
-    books_copy = books_df.copy()
-    #normalise input and dataset
-    books_copy['title'] = books_copy['title'].str.strip().str.lower()
-    book_title = book_title.strip().lower()
-    #check is title is in books_copy
-    if book_title not in books_copy['title'].values:
-        print(f"Book '{book_title}' not found in dataset.")
+    filtered_books = books_df[
+        books_df['book_id'].isin(relevant_books)
+    ][['book_id', 'title', 'author', 'edition', 'pub_year']]
+
+    return filtered_books
+
+#hybrid recommendation system (combining title-based and student info-based recommendations)
+
+def hybrid_recommend_books(user_choice, book_title, branch, semester, books_df, branch_course_df, courses_books_df, tfidf_matrix, tfidf, top_n=5):
+    #getting book title
+    matched_title = fuzzy_match(book_title, books_df, user_choice, top_n)
+    if not matched_title:
         return pd.DataFrame()
-    #get index of the book
-    book_idx = books_copy[books_copy['title'] == book_title].index[0]
+    
+    #data of matched book
+    book_idx = books_df[books_df['title'] == matched_title].index
+    if book_idx.empty:
+        print("Matched title not found in the dataset.")
+        return pd.DataFrame()
+    book_idx = book_idx[0]
 
-    #content-based similarity
-    content_similarities = cosine_similarity(tfidf_matrix[book_idx], tfidf_matrix).flatten()
+    #title-based filtering
+    title_similarities = cosine_similarity(tfidf_matrix[book_idx], tfidf_matrix).flatten()
 
-    #collaborative similarity
-    collaborative_similarities = np.zeros(len(books_df)) #default to zeros for books with no borrowing data
-    book_id = books_copy.loc[book_idx, 'book_id']
-    if book_id in book_similarity_df.index:
-        collaborative_similarities = book_similarity_df.loc[book_id].reindex(books_copy['book_id'], fill_value=0).values
+    #student info-based filtering
+    relevant_courses = branch_course_df[(branch_course_df['branch'] == branch) & (branch_course_df['semester'] == semester)]['course_code']
+    relevant_books = courses_books_df[courses_books_df['course_code'].isin(relevant_courses)]['book_id']
 
-    #combine similarities with equal weights
-    hybrid_similarities = (0.8 * content_similarities + 0.2 * collaborative_similarities) / 2
+    #combining results
+    books_df['title_similarity'] = title_similarities
+    books_df['is_relevant'] = books_df['book_id'].isin(relevant_books).astype(int)
 
-    #filter low similarity results
-    hybrid_similarities[hybrid_similarities < threshold] = 0
+    #weighted combination 
+    books_df['hybrid_score'] = (books_df['title_similarity'] + books_df['is_relevant']) / 2
+    top_indices = books_df.sort_values(by='hybrid_score', ascending=False).head(top_n)
 
-    #top n recommendations
-    top_indices = np.argsort(hybrid_similarities)[-top_n - 1:][::-1]  #exclude the input book
-    top_indices = [idx for idx in top_indices if idx != book_idx][:top_n]
+    return top_indices[['book_id', 'title', 'author', 'edition', 'pub_year']]
 
-    #metadata for recommended books
-    recommendations = books_df.iloc[top_indices].copy()
-    recommendations['hybrid_score'] = hybrid_similarities[top_indices]
+#function to get user input
 
-    req_data = ['book_id', 'title', 'author', 'edition', 'pub_year']
-    return recommendations[req_data]
+def recommend_books(user_choice, book_title=None, branch=None, semester=None, books_df=None, branch_course_df=None, 
+                    courses_books_df=None, tfidf_matrix=None, tfidf=None, top_n=5):
+    if user_choice == "title":
+        return fuzzy_match(book_title, books_df, user_choice, top_n)
+    elif user_choice == "branch_semester":
+        return recommend_books_by_branch_semester(branch, semester, branch_course_df, courses_books_df, books_df)
+    elif user_choice == "hybrid":   
+        return hybrid_recommend_books(user_choice, book_title, branch, semester, books_df, branch_course_df, courses_books_df, tfidf_matrix, tfidf, top_n)
+    else:
+        raise ValueError("Invalid choice. Please select 'title', 'branch_semester', or 'hybrid'.")
+    
+def get_sem(usn):
+    if "22" in usn:
+        return 5
+    elif "23" in usn:
+        return 4
+    else:
+        print("Invalid USN")
 
-#example
-book_title = "Discrete Mathematics – A Concept-based approach"
-recommended_books = hybrid_recommend_books(book_title, books_df, tfidf_matrix, tfidf, book_similarity_df)
-if not recommended_books.empty:
-    print(recommended_books)
-else:
-    print("No recommendations found.")
+def get_branch(usn):
+    if "ad" in usn:
+        return "AD"
+    elif "cs" in usn:
+        return "CSE"
+    elif "cb" in usn:
+        return "CB"
+    else:
+        print("Invalid USN")
+
+# Example inputs
+print("What type of recommendations would you like?")
+print("1. From title/topic\t 2. From USN\t 3. Both")
+recs = int(input("Enter 1/2/3: "))
+if recs == 1:
+    user_choice = "title"
+    book_title = input("Enter the title or topic: ").lower()
+    branch = None
+    semester = None
+elif recs == 2:
+    user_choice = "branch_semester"
+    usn = input("Enter your USN: ").lower()
+    branch = get_branch(usn)
+    semester = get_sem(usn)
+    book_title = None
+    print(f'Branch: {branch} Semester: {semester}')
+elif recs == 3:
+    user_choice = "hybrid"
+    usn = input("Enter your USN: ").lower()
+    branch = get_branch(usn)
+    semester = get_sem(usn)
+    book_title = input("Enter the title or topic: ").lower()
+
+#recommendations based on user choice
+recommended_books = recommend_books(user_choice, book_title=book_title, branch=branch, semester=semester,
+                                     books_df=books, branch_course_df=branch_course, 
+                                     courses_books_df=courses_books, tfidf_matrix=tfidf_matrix, tfidf=tfidf)
+print(recommended_books)
