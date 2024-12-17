@@ -41,7 +41,6 @@ def fuzzy_match(book_title, books_df, user_choice, top_n):
         return recommend_books_by_title(matched_title, books_df, tfidf_matrix, top_n)
 
     if best_match and best_match[1] >= 60: #confidence threshold = 60
-        print(f"Matched Title: {best_match[0]} (Confidence: {best_match[1]})")
         return best_match[0]  # Return the matched title
     else:
         print("No matching book title found.")
@@ -54,8 +53,6 @@ def recommend_books_by_title(book_title, books_df, tfidf_matrix, top_n=5):
     similarities = cosine_similarity(query_vec, tfidf_matrix).flatten()
     top_indices = similarities.argsort()[-top_n:][::-1]
     return books_df.iloc[top_indices][['book_id', 'title', 'author', 'edition', 'pub_year']]
-
-#function for branch & semester based recommendations
 
 #function for branch & semester based recommendations
 
@@ -102,7 +99,7 @@ def hybrid_recommend_books(user_choice, book_title, branch, semester, books_df, 
     books_df['is_relevant'] = books_df['book_id'].isin(relevant_books).astype(int)
 
     #weighted combination 
-    books_df['hybrid_score'] = (books_df['title_similarity'] + books_df['is_relevant']) / 2
+    books_df['hybrid_score'] = (0.75 * books_df['title_similarity'] + 0.25 * books_df['is_relevant']) / 2
     top_indices = books_df.sort_values(by='hybrid_score', ascending=False).head(top_n)
 
     return top_indices[['book_id', 'title', 'author', 'edition', 'pub_year']]
