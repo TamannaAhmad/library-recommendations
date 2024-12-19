@@ -11,12 +11,12 @@ ul {
   
   li a {
     display: block;
-    color: black;
+    color: white;
     font-family: arial;
     font-size:18px;
     text-align: center;
     padding: 40px 20px;
-    text-decoration: black;
+    text-decoration: white;
   }
   li a:hover {
     background-color: rgba(255, 255, 255, 0.864);
@@ -70,7 +70,7 @@ ul {
 .login-container h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: black;
+    color: rgba(40, 98, 124, 0.429);
 }
 
 form {
@@ -82,7 +82,7 @@ form {
 form label {
     margin: 10px 0 5px;
     font-weight: bold;
-    color: black;
+    color: rgba(40, 98, 124, 0.429);
 }
 
 form input {

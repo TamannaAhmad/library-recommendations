@@ -11,12 +11,12 @@ li {
 
 li a {
   display: block;
-  color: black;
+  color: white;
   font-family: arial;
   font-size:18px;
   text-align: center;
   padding: 40px 20px;
-  text-decoration: black;
+  text-decoration: white;
 }
 li a:hover {
   background-color: rgba(255, 255, 255, 0.864);
