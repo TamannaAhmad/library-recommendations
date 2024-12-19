@@ -1,0 +1,131 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(40, 98, 124, 0.429);
+    overflow:hidden;
+  }
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    font-family: arial;
+    font-size:18px;
+    text-align: center;
+    padding: 40px 20px;
+    text-decoration: black;
+  }
+  li a:hover {
+    background-color: rgba(255, 255, 255, 0.864);
+  }
+  .active {
+    background-color:rgba(40, 98, 124, 0.429); 
+  }
+  .nav-logo{
+    height:100px;
+    width:100px;
+  }
+  .logo{
+    background-image: url("images/logo.jpeg");
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+  }
+  .border{
+    border:2px solid transparent;
+  }
+  .border:hover{
+    border: 2px solid white;
+  }
+  p {
+    font-size: 30px;
+    font-family: 'cursive';
+  }
+  .website-name {
+    font-size: 28px; 
+    color: white;
+    position: absolute;  
+    top: 4.5px;  
+    left: 60px; 
+    transform: translateX(45%); 
+    text-align: center;
+    padding: 33px 1px;
+    font-family:'cursive';
+  
+  }
+
+
+h1 {
+    margin-bottom: 10px;
+    color:white;
+    font-family: 'cursive';
+    font-weight: normal;
+    font-size:55px;
+}
+
+.accordion {
+    background-color: rgba(40, 98, 124, 0.429);;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    margin: 15px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: white;
+    border: 1px solid white;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: normal;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+body {
+  background: linear-gradient(-45deg,  #D3EEDD,   #E7DBCC,#ABD7EB, #D2D2CF);
+  background-size: 500% 800%;
+  animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media (max-width: 768px) {
+  .website-name {
+      font-size: 28px;
+      position: relative;
+      text-align: center;
+  }
+}
+

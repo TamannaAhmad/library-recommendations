@@ -1,0 +1,185 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(40, 98, 124, 0.429);
+  overflow:hidden;
+}
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: black;
+  font-family: arial;
+  font-size:18px;
+  text-align: center;
+  padding: 40px 20px;
+  text-decoration: black;
+}
+li a:hover {
+  background-color: rgba(255, 255, 255, 0.864);
+}
+.active {
+  background-color:rgba(8, 136, 195, 0.429);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  max-width: 1200px; 
+  margin: 40auto; 
+  padding: 20 80px;
+
+}
+.nav-logo{
+  height:100px;
+  width:100px; 
+}
+.logo{
+  background-image: url("images/logo.jpeg");
+  background-size: cover;
+  height: 100px;
+  width: 100%;
+}
+.border{
+  border:2px solid transparent;
+}
+.border:hover{
+  border: 2px solid white;
+}
+p {
+  font-size: 30px;
+  font-family: 'cursive';
+}
+.website-name {
+  font-size: 28px; 
+  color: white;
+  position: absolute;  
+  top: 4.5px;  
+  left: 60px; 
+  transform: translateX(45%); 
+  text-align: center;
+  padding: 33px 1px;
+  font-family:'cursive';
+
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 180px auto;
+  padding: 20px;
+  background:rgba(255, 255, 255, 0.719);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(252, 250, 250, 0.992);
+  text-align: center;
+}
+.login-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgba(40, 98, 124, 0.429);
+  font-family: 'cursive';
+  font-weight: normal;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color:rgba(40, 98, 124, 0.429);
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form input:focus {
+  border-color: rgba(40, 98, 124, 0.429);
+  outline: none;
+  box-shadow: 0 0 4px  rgba(40, 98, 124, 0.429);;
+}
+
+form button {
+  padding: 10px;
+  background-color:  rgba(40, 98, 124, 0.429);;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color:  rgba(40, 98, 124, 0.429);;
+}
+body {
+background: linear-gradient(-45deg,  #D3EEDD,   #E7DBCC,#ABD7EB, #D2D2CF);
+background-size: 500% 800%;
+animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+@media (max-width: 768px) {
+.website-name {
+    font-size: 28px; 
+    position: relative;
+    text-align: center;
+}
+}
+.login-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+button {
+  padding: 10px 10px;
+  background-color: rgba(40, 98, 124, 0.429);
+  color: white;
+  border: none;
+  border-radius:25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+select {
+  width: 115px;  
+  height:60px; 
+  padding: 20px;
+  font-size: 18px; 
+  border: 2px solid rgba(40, 98, 124, 0.429) ;
+  border-radius: 10px; 
+
+}
+
+select option:focus {
+  background-color: #f0f0f0;  
+  border-color:rgba(40, 98, 124, 0.429) ;     
+}
+
+

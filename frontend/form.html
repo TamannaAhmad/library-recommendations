@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="Contributors.html">Contributors</a></li>
+            <li><a href="FAQ's.html">FAQ's</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="index.html">Home</a></li>
+            <div class="navbar">
+                <div class="nav-logo border">
+                    <div class="logo">
+                        <span class="website-name">NeuroLib</span>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </header>
+    <div class="login-container">
+        <h1>What type of recommendation?</h1>
+        <!-- Change the method to GET and send the form data as query parameters -->
+        <form action="hidden-page.html" method="GET">
+            <select id="Select" name="selection">
+                <option value="Topic">Topic</option>
+                <option value="USN">USN</option>
+                <option value="Both">Both</option>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

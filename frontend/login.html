@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="Contributors.html">Contributors</a></li>
+            <li><a href="FAQ's.html">FAQ's</a></li>
+            <li><a href="form.html">form</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="index.html">Home</a></li>
+            <div class="navbar">
+                <div class="nav-logo border">
+                    <div class="logo">
+                        <span class="website-name">NeuroLib</span>
+                    </div>
+                    <div class="center">
+                        </div>
+                </div>
+            </div>
+          </ul>
+    </header>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="authenticate.php" method="post"> 
+            <label for="USN">USN:</label>
+            <input type="text" id="USN" name="USN" required>
+            <label for="CAPTCHA">CAPTCHA:</label>
+            <input type="CAPTCHA" id="CAPTCHA" name="CAPTCHA" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

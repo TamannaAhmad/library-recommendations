@@ -1,0 +1,123 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(40, 98, 124, 0.429);
+    overflow:hidden;
+  }
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    font-family: arial;
+    font-size:18px;
+    text-align: center;
+    padding: 40px 20px;
+    text-decoration: white;
+  }
+  li a:hover {
+    background-color: rgba(255, 255, 255, 0.864);
+  }
+  .active {
+    background-color: rgba(40, 98, 124, 0.429);
+  }
+  .nav-logo{
+    height:100px;
+    width:100px;
+  }
+  .logo{
+    background-image: url("images/logo.jpeg");
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+  }
+  .border{
+    border:2px solid transparent;
+  }
+  .border:hover{
+    border: 2px solid white;
+  }
+  p {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .website-name {
+    font-size: 28px; 
+    color: white;
+    position: absolute;  
+    top: 4.5px;  
+    left: 60px; 
+    transform: translateX(45%); 
+    text-align: center;
+    padding: 33px 1px;
+    font-family:'cursive';
+  
+  }
+        body { background: linear-gradient(-45deg,  #D3EEDD,   #E7DBCC,#ABD7EB, #D2D2CF);
+          background-size: 500% 800%;
+          animation: gradientBG 10s ease infinite;
+           
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .contributor {
+            display: inline-block;
+            margin: 50px;
+        }
+        .contributor img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+        .social-links {
+            margin-top: 10px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 5px;
+            text-decoration: none;
+            color:black ;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+        .social-links a:hover {
+            background-color: rgba(40, 98, 124, 0.429);
+        }
+        @keyframes gradientBG {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        @media (max-width: 768px) {
+          .website-name {
+              font-size: 28px;
+              position: relative;
+              text-align: center;
+          }
+        }
+        h1{
+          margin-bottom: 10px;
+    color:white;
+    font-family: 'cursive';
+    font-weight: normal;
+    font-size:55px;
+        }
+ h2{
+  color:white;
+  font-family: 'cursive';
+  font-weight: normal;
+ }
+   
